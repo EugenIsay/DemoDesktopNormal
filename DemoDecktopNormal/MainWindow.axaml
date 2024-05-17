@@ -1,0 +1,28 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DemoDecktopNormal.MainWindow"
+		x:CompileBindings="False"
+        Title="DemoDecktopNormal">
+	<Window.Styles>
+		<Style Selector="TextBox.H1">
+			<Setter Property="Margin" Value="200,5"/>
+		</Style>
+		<Style Selector="TextBlock.H1">
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+		</Style>
+	</Window.Styles>
+	<Border Background="White" CornerRadius="100">
+		<StackPanel VerticalAlignment="Center">
+			<TextBlock HorizontalAlignment="Center" FontSize="30" Text="Авторитаризация"/>
+			<TextBlock Classes="H1" Text="Логин"/>
+			<TextBox Classes="H1" Name="Login"  />
+			<TextBlock Classes="H1" Text="Пароль" />
+			<TextBox Classes="H1" Name="Password"   />
+			<TextBlock HorizontalAlignment="Center" Foreground="Red"/>
+			<Button HorizontalAlignment="Center" Click="Reg"  Content="Подтвердить"/>
+		</StackPanel>
+	</Border>
+</Window>

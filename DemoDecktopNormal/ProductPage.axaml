@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DemoDecktopNormal.ProductPage"
+		x:CompileBindings="False"
+        Title="ProductPage">
+	<DockPanel VerticalAlignment="Stretch" LastChildFill="True">
+		<StackPanel DockPanel.Dock="Top" Margin="20, 10" Orientation="Vertical">
+			<TextBlock HorizontalAlignment="Right" />
+			<Button Click="Exit" Content="Выход" HorizontalAlignment="Right" />
+			<TextBox />
+			<StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock Text="Сортировка по цене"/>
+					<Button Content="По возрастанию" />
+					<Button Content="По убыванию" />
+				</StackPanel>
+				<ComboBox  SelectedIndex="{Binding ManInd}" ItemsSource="{Binding Manufacturers}">
+
+				</ComboBox>
+			</StackPanel>
+		</StackPanel>
+		<Button  Margin="20" DockPanel.Dock="Bottom" Click="Add" Content="Добавить товар" />
+		<ListBox Margin="20,0" DockPanel.Dock="Top">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+						<StackPanel Orientation="Vertical">
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text=" Название:"/>
+								<TextBlock Text="{Binding Name}"/>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text=" Цена:"/>
+								<TextBlock Text="{Binding Price}"/>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text=" Количество:"/>
+								<TextBlock Text="{Binding Amount}"/>
+								<TextBlock Text="{Binding Unit}"/>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text=" Категория:"/>
+								<TextBlock Text="{Binding Category}"/>
+							</StackPanel>
+							<StackPanel Orientation="Horizontal">
+								<TextBlock Text=" Производитель:"/>
+								<TextBlock Text="{Binding Manufacturer}"/>
+							</StackPanel>
+						</StackPanel>
+						<Button Margin="20, 0"  Content="Редактировать" />
+						<Button Margin="20, 0"  Content="Удалить" />
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+
+	</DockPanel>
+</Window>

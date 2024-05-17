@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DemoDecktopNormal.Edit"
+		x:CompileBindings="False"
+        Title="Edit">
+	<Border Background="White" BorderBrush="BlueViolet" BorderThickness="2">
+		<StackPanel Orientation="Horizontal">
+			<StackPanel Margin="10">
+				<TextBlock Text="Название товара "/>
+				<TextBox Name="Name"/>
+				<TextBlock Text="Количество "/>
+				<TextBox Name="Amount"/>
+				<TextBlock Text="Стоимость за единицу "/>
+				<TextBox Name="Price"/>
+				<TextBlock Text="Единица иpмерения "/>
+				<ComboBox ItemsSource="{Binding UnitType} " Name="Unit"/>
+				<TextBlock Text="Категория "/>
+				<ComboBox AutoScrollToSelectedItem="True" Name="Category" ItemsSource="{Binding Categories}">
+				</ComboBox>
+				<TextBlock Text="Производитель "/>
+				<TextBox Name="Manufacturer" />
+				<TextBlock Text="Описание "/>
+				<TextBox Name="Description" />
+				<Button Content="Подтвердить " />
+			</StackPanel>
+
+		</StackPanel>
+	</Border>
+</Window>
