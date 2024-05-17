@@ -14,16 +14,16 @@
 			<StackPanel>
 				<StackPanel Orientation="Horizontal">
 					<TextBlock Text="Сортировка по цене"/>
-					<Button Content="По возрастанию" />
-					<Button Content="По убыванию" />
+					<Button Click="Ascending" Content="По возрастанию" />
+					<Button Click="Descending" Content="По убыванию" />
 				</StackPanel>
-				<ComboBox  SelectedIndex="{Binding ManInd}" ItemsSource="{Binding Manufacturers}">
+				<ComboBox SelectionChanged="ComboBox_SelectionChanged" Name="Man">
 
 				</ComboBox>
 			</StackPanel>
 		</StackPanel>
 		<Button  Margin="20" DockPanel.Dock="Bottom" Click="Add" Content="Добавить товар" />
-		<ListBox Margin="20,0" DockPanel.Dock="Top">
+		<ListBox Name="BoxList" Margin="20,0" DockPanel.Dock="Top">
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -50,7 +50,7 @@
 								<TextBlock Text="{Binding Manufacturer}"/>
 							</StackPanel>
 						</StackPanel>
-						<Button Margin="20, 0"  Content="Редактировать" />
+						<Button Margin="20, 0" Command="{Binding Redact}" Content="Редактировать" />
 						<Button Margin="20, 0"  Content="Удалить" />
 					</StackPanel>
 				</DataTemplate>

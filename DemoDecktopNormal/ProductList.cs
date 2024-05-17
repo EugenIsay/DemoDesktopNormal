@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Media.Imaging;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,18 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Tmds.DBus.SourceGenerator;
+using System.Reflection;
+using System.Collections.ObjectModel;
+using Avalonia.Controls;
+using Avalonia;
 
 namespace DemoDecktopNormal
 {
@@ -36,6 +49,29 @@ namespace DemoDecktopNormal
             }
             Fill(Products);
         }
+        public static void Descending()
+        {
+            List<Product> temp = ShownProducts.OrderByDescending(p => p.Price).ToList();
+            Fill(temp);
+        }
+        public static void Ascending()
+        {
+            List<Product> temp = ShownProducts.OrderBy(p => p.Price).ToList();
+            Fill(temp);
+        }
+        public static void ProductFiltration(int i)
+        {
+            if ( i != 0)
+            {
+                List<Product> temp = Products.Where(p => p.Manufacturer == Manufacturers[i]).ToList();
+                Fill(temp);
+            }
+            else
+            {
+                Fill(Products);
+            }
+
+        }
     }
     public class Product
     {
@@ -50,17 +86,16 @@ namespace DemoDecktopNormal
         public decimal Price { get { return Math.Round(_price, 2); } set { _price = Math.Round(value, 2); } }
         public string Description { get; set; }
         public Bitmap Image { get; set; }
-        //int FindMyInd
-        //{
-        //    get { return ProductsList.GetProducts.IndexOf(ProductsList.GetProducts.FirstOrDefault(po => po.Name == Name && po.Price == Price && po.Manufacturer == Manufacturer && po.Amount == Amount && po.Category == Category && po.Unit == Unit)); }
-        //}
-        //public async void Redact()
-        //{
-        //    var dialog = new EditView();
-        //    dialog.DataContext = new EditingViewModel(FindMyInd);
-        //    await dialog.ShowDialog((Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime).MainWindow).ConfigureAwait(true);
+        int FindMyInd
+        {
+            get { return ProductList.Products.IndexOf(ProductList.Products.FirstOrDefault(po => po.Name == Name && po.Price == Price && po.Manufacturer == Manufacturer && po.Amount == Amount && po.Category == Category && po.Unit == Unit)); }
+        }
+        public async void Redact()
+        {
+            (Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime).MainWindow.Close();
+            new Edit(FindMyInd).Show();
 
-        //}
+        }
         //public void Delete()
         //{
         //    ProductsList.RemoveProduct(FindMyInd);

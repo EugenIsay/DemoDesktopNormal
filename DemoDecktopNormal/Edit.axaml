@@ -24,7 +24,7 @@
 				<TextBox Name="Manufacturer" />
 				<TextBlock Text="Описание "/>
 				<TextBox Name="Description" />
-				<Button Content="Подтвердить " />
+				<Button Content="Подтвердить " Click="Add" />
 			</StackPanel>
 
 		</StackPanel>
