@@ -1,37 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\",
+  "WorkspaceRootPath": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\edit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\edit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\edit.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\edit.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\productlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\productpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\productpage.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\productpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\mainwindow.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\edit.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\edit.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\edit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\edit.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\productpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\productpage.axaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\productpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\productpage.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
-      "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\zheka\\desktop\\projects\\demodesktop\\demodecktopnormal\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|c:\\users\\profi\\desktop\\isayproj\\demodesktop\\demodecktopnormal\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{583F0928-7EBE-4471-A73C-886314188FA6}|DemoDecktopNormal\\DemoDecktopNormal.csproj|solutionrelative:demodecktopnormal\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,103 +50,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit.axaml",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\Edit.axaml",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml",
-              "RelativeToolTip": "DemoDecktopNormal\\Edit.axaml",
+              "DocumentIndex": 7,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\Users.cs",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\Users.cs",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\Users.cs",
+              "RelativeToolTip": "DemoDecktopNormal\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T10:43:12.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductPage.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml.cs",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\ProductPage.axaml.cs",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml.cs",
+              "RelativeToolTip": "DemoDecktopNormal\\ProductPage.axaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T10:43:11.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductPage.axaml",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\ProductPage.axaml",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml",
+              "RelativeToolTip": "DemoDecktopNormal\\ProductPage.axaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T09:48:50.203Z",
+              "WhenOpened": "2024-05-20T10:43:10.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductList.cs",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\ProductList.cs",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\ProductList.cs",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\ProductList.cs",
+              "RelativeToolTip": "DemoDecktopNormal\\ProductList.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwCsAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T10:43:10.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Edit.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml.cs",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\Edit.axaml.cs",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml.cs",
-              "RelativeToolTip": "DemoDecktopNormal\\Edit.axaml.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAhwCcAAAAXAAAA",
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml.cs",
+              "RelativeToolTip": "DemoDecktopNormal\\MainWindow.axaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T09:48:49.858Z",
+              "WhenOpened": "2024-05-20T10:43:09.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\MainWindow.axaml",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml",
+              "RelativeToolTip": "DemoDecktopNormal\\MainWindow.axaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-20T10:43:09.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ProductPage.axaml",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\ProductPage.axaml",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml",
-              "RelativeToolTip": "DemoDecktopNormal\\ProductPage.axaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T09:39:35.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductPage.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml.cs",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\ProductPage.axaml.cs",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\ProductPage.axaml.cs",
-              "RelativeToolTip": "DemoDecktopNormal\\ProductPage.axaml.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowAsAAAAYAAAA",
+              "Title": "Edit.axaml.cs",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml.cs",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\Edit.axaml.cs",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml.cs",
+              "RelativeToolTip": "DemoDecktopNormal\\Edit.axaml.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwCsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T09:39:35.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Users.cs",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\Users.cs",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\Users.cs",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\Users.cs",
-              "RelativeToolTip": "DemoDecktopNormal\\Users.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T09:31:18.799Z",
+              "WhenOpened": "2024-05-20T10:43:08.366Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductList.cs",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\ProductList.cs",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\ProductList.cs",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\ProductList.cs",
-              "RelativeToolTip": "DemoDecktopNormal\\ProductList.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAcwGEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T09:29:02.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.axaml",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\MainWindow.axaml",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml",
-              "RelativeToolTip": "DemoDecktopNormal\\MainWindow.axaml",
+              "Title": "Edit.axaml",
+              "DocumentMoniker": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml",
+              "RelativeDocumentMoniker": "DemoDecktopNormal\\Edit.axaml",
+              "ToolTip": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\Edit.axaml",
+              "RelativeToolTip": "DemoDecktopNormal\\Edit.axaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-05-17T09:27:30.997Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.axaml.cs",
-              "DocumentMoniker": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml.cs",
-              "RelativeDocumentMoniker": "DemoDecktopNormal\\MainWindow.axaml.cs",
-              "ToolTip": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\MainWindow.axaml.cs",
-              "RelativeToolTip": "DemoDecktopNormal\\MainWindow.axaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-17T09:27:30.927Z",
+              "WhenOpened": "2024-05-20T10:43:07.741Z",
               "EditorCaption": ""
             }
           ]

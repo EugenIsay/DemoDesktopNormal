@@ -49,6 +49,22 @@ namespace DemoDecktopNormal
             }
             Fill(Products);
         }
+        public static void ChangeProduct(string Name, int Amount, string Manufacturer, decimal Price, string Description, int Unit, int Category, int ind)
+        {
+            Product product = new Product() { Name = Name, Amount = Amount, Manufacturer = Manufacturer, Price = Price, Description = Description, Unit = UnitType[Unit], Category = Categories[Category] };
+            Products[ind] = product;
+            
+            string tmp = Manufacturers.FirstOrDefault(Manufacturer);
+            if (!Manufacturers.Contains(Manufacturer))
+            {
+                Manufacturers.Add(Manufacturer);
+            }
+            if (Products.Where(p => p.Manufacturer == Manufacturer).Count() == 0)
+            {
+                Manufacturers.Remove(Manufacturer);
+            }
+            Fill(Products);
+        }
         public static void Descending()
         {
             List<Product> temp = ShownProducts.OrderByDescending(p => p.Price).ToList();

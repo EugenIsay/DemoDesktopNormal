@@ -38,12 +38,12 @@ public partial class Edit : Window
         if (index == null)
         {
             ProductList.AddProduct(Name.Text, Convert.ToInt32(Amount.Text.ToString()), Manufacturer.Text, Convert.ToDecimal(Price.Text.ToString()), Description.Text, Unit.SelectedIndex, Category.SelectedIndex);
-            new ProductPage().Show();
-            this.Close();
         }
         else
         {
 
         }
+        new ProductPage().Show();
+        this.Close();
     }
 }
