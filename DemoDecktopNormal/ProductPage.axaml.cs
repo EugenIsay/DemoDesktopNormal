@@ -1,9 +1,7 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
-using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DemoDecktopNormal;
 
@@ -40,6 +38,16 @@ public partial class ProductPage : Window
     public void Ascending(object sender, RoutedEventArgs args)
     {
         ProductList.Ascending();
+        BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+    }
+    public async void Redact(object sender, RoutedEventArgs args)
+    {
+        await Task.Delay(100);
+        this.Close();
+    }
+    public async void Delete(object sender, RoutedEventArgs args)
+    {
+        await Task.Delay(100);
         BoxList.ItemsSource = ProductList.ShownProducts.ToList();
     }
 

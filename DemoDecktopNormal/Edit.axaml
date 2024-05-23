@@ -24,6 +24,7 @@
 				<TextBox Name="Manufacturer" />
 				<TextBlock Text="Описание "/>
 				<TextBox Name="Description" />
+				<Button Content="Добавить картинку " Click="Pict" />
 				<Button Content="Подтвердить " Click="Add" />
 			</StackPanel>
 

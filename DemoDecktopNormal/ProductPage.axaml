@@ -50,8 +50,8 @@
 								<TextBlock Text="{Binding Manufacturer}"/>
 							</StackPanel>
 						</StackPanel>
-						<Button Margin="20, 0" Command="{Binding Redact}" Content="Редактировать" />
-						<Button Margin="20, 0"  Content="Удалить" />
+						<Button Margin="20, 0" Command="{Binding Redact}" Click="Redact" Content="Редактировать" />
+						<Button Margin="20, 0"  Content="Удалить" Click="Delete" Command="{Binding Delete}" />
 					</StackPanel>
 				</DataTemplate>
 			</ListBox.ItemTemplate>

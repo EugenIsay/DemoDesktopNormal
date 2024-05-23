@@ -13,7 +13,6 @@ namespace DemoDecktopNormal
             Users.Adduser("user", "user", "user");
             Users.Adduser("manager", "manager", "manager");
             Users.Adduser("admin", "admin", "admin");
-            ProductList.AddProduct("a", 2, "av", 12, "abc", 2, 2);
         }
         public void Reg(object sender, RoutedEventArgs args)
         {

@@ -31,40 +31,33 @@ namespace DemoDecktopNormal
         public static string[] Categories = { "Овощи", "Фрукты", "Мясо", "Бытовая техника", "Инструменты", "Другое" };
         public static string[] UnitType = { "Штук", "Грамм", "Килограмм", "Литров" };
 
-        public static void Fill (List<Product> List)
+        public static void Fill(List<Product> List)
         {
             ShownProducts.Clear();
-            foreach (var item in List) 
+            foreach (var item in List)
             {
-                ShownProducts.Add (item);
+                ShownProducts.Add(item);
             }
         }
-        public static void AddProduct(string Name, int Amount, string Manufacturer, decimal Price, string Description, int Unit, int Category)
+        public static void AddProduct(Product product)
         {
-            Products.Add(new Product() { Name = Name, Amount = Amount, Manufacturer = Manufacturer, Price = Price, Description = Description, Unit = UnitType[Unit], Category = Categories[Category] });
-            string tmp = Manufacturers.FirstOrDefault(Manufacturer);
-            if (!Manufacturers.Contains(Manufacturer))
+            if (!Manufacturers.Contains(product.Manufacturer))
             {
-                Manufacturers.Add(Manufacturer);
+                Manufacturers.Add(product.Manufacturer);
             }
+            Products.Add(product);
             Fill(Products);
         }
-        public static void ChangeProduct(string Name, int Amount, string Manufacturer, decimal Price, string Description, int Unit, int Category, int ind)
+        public static void RedactProduct(Product product, int i)
         {
-            Product product = new Product() { Name = Name, Amount = Amount, Manufacturer = Manufacturer, Price = Price, Description = Description, Unit = UnitType[Unit], Category = Categories[Category] };
-            Products[ind] = product;
-            
-            string tmp = Manufacturers.FirstOrDefault(Manufacturer);
-            if (!Manufacturers.Contains(Manufacturer))
+            if (!Manufacturers.Contains(product.Manufacturer))
             {
-                Manufacturers.Add(Manufacturer);
+                Manufacturers.Add(product.Manufacturer);
             }
-            if (Products.Where(p => p.Manufacturer == Manufacturer).Count() == 0)
-            {
-                Manufacturers.Remove(Manufacturer);
-            }
+            Products[i] = product;
             Fill(Products);
         }
+
         public static void Descending()
         {
             List<Product> temp = ShownProducts.OrderByDescending(p => p.Price).ToList();
@@ -77,7 +70,7 @@ namespace DemoDecktopNormal
         }
         public static void ProductFiltration(int i)
         {
-            if ( i != 0)
+            if (i != 0)
             {
                 List<Product> temp = Products.Where(p => p.Manufacturer == Manufacturers[i]).ToList();
                 Fill(temp);
@@ -87,6 +80,11 @@ namespace DemoDecktopNormal
                 Fill(Products);
             }
 
+        }
+        public static void RemoveProduct(int i)
+        {
+            Products.RemoveAt(i);
+            Fill(Products);
         }
     }
     public class Product
@@ -102,19 +100,18 @@ namespace DemoDecktopNormal
         public decimal Price { get { return Math.Round(_price, 2); } set { _price = Math.Round(value, 2); } }
         public string Description { get; set; }
         public Bitmap Image { get; set; }
+        int ind { get; set; }
         int FindMyInd
         {
             get { return ProductList.Products.IndexOf(ProductList.Products.FirstOrDefault(po => po.Name == Name && po.Price == Price && po.Manufacturer == Manufacturer && po.Amount == Amount && po.Category == Category && po.Unit == Unit)); }
         }
-        public async void Redact()
+        public void Redact()
         {
-            (Application.Current.ApplicationLifetime as IClassicDesktopStyleApplicationLifetime).MainWindow.Close();
             new Edit(FindMyInd).Show();
-
         }
-        //public void Delete()
-        //{
-        //    ProductsList.RemoveProduct(FindMyInd);
-        //}
+        public void Delete()
+        {
+            ProductList.RemoveProduct(FindMyInd);
+        }
     }
 }
