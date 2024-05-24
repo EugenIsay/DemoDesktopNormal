@@ -27,7 +27,7 @@
 				<Button Content="Добавить картинку " Click="Pict" />
 				<Button Content="Подтвердить " Click="Add" />
 			</StackPanel>
-
+			<Image Name="Image"  MaxHeight="300"  />
 		</StackPanel>
 	</Border>
 </Window>

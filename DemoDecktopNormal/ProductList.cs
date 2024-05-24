@@ -20,6 +20,7 @@ using System.Reflection;
 using System.Collections.ObjectModel;
 using Avalonia.Controls;
 using Avalonia;
+using System.IO;
 
 namespace DemoDecktopNormal
 {
@@ -54,7 +55,16 @@ namespace DemoDecktopNormal
             {
                 Manufacturers.Add(product.Manufacturer);
             }
+            string tmp = Products[i].Manufacturer;
+            if (File.Exists(Products[i].ImagePath) && Products[i].ImagePath != $"{Environment.CurrentDirectory}\\default.png")
+            {
+                File.Delete(Products[i].ImagePath);
+            }
             Products[i] = product;
+            if (Products.Where(p => p.Manufacturer == tmp).Count() == 0)
+            {
+                Manufacturers.Remove(tmp);
+            }
             Fill(Products);
         }
 
@@ -70,7 +80,7 @@ namespace DemoDecktopNormal
         }
         public static void ProductFiltration(int i)
         {
-            if (i != 0)
+            if (i > 0)
             {
                 List<Product> temp = Products.Where(p => p.Manufacturer == Manufacturers[i]).ToList();
                 Fill(temp);
@@ -83,7 +93,16 @@ namespace DemoDecktopNormal
         }
         public static void RemoveProduct(int i)
         {
+            string tmp = Products[i].Manufacturer;
+            if (File.Exists(Products[i].ImagePath) && Products[i].ImagePath != $"{Environment.CurrentDirectory}\\default.png")
+            {
+                File.Delete(Products[i].ImagePath);
+            }
             Products.RemoveAt(i);
+            if (Products.Where(p => p.Manufacturer == tmp).Count() == 0)
+            {
+                Manufacturers.Remove(tmp);
+            }
             Fill(Products);
         }
     }
@@ -99,8 +118,8 @@ namespace DemoDecktopNormal
         private decimal _price;
         public decimal Price { get { return Math.Round(_price, 2); } set { _price = Math.Round(value, 2); } }
         public string Description { get; set; }
-        public Bitmap Image { get; set; }
-        int ind { get; set; }
+        public string ImagePath { get; set; }
+        public Bitmap Image { get => new Bitmap(ImagePath); }
         int FindMyInd
         {
             get { return ProductList.Products.IndexOf(ProductList.Products.FirstOrDefault(po => po.Name == Name && po.Price == Price && po.Manufacturer == Manufacturer && po.Amount == Amount && po.Category == Category && po.Unit == Unit)); }

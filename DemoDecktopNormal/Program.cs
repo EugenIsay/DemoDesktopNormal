@@ -1,5 +1,8 @@
 ﻿using Avalonia;
+using Avalonia.Styling;
 using System;
+using System.IO;
+using System.Xml.Linq;
 
 namespace DemoDecktopNormal
 {
@@ -18,5 +21,7 @@ namespace DemoDecktopNormal
                 .UsePlatformDetect()
                 .WithInterFont()
                 .LogToTrace();
+
+
     }
 }

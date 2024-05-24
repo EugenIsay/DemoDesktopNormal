@@ -7,6 +7,7 @@ using Avalonia.Media.Imaging;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Xml.Linq;
 
 namespace DemoDecktopNormal;
 
@@ -17,6 +18,8 @@ public partial class Edit : Window
         InitializeComponent();
         Unit.ItemsSource = ProductList.UnitType;
         Category.ItemsSource = ProductList.Categories;
+        FilePath = $"{Environment.CurrentDirectory}\\default.png";
+        Image.Source = new Bitmap(FilePath);
     }
     public Edit(int i)
     {
@@ -25,6 +28,8 @@ public partial class Edit : Window
         Category.ItemsSource = ProductList.Categories;
         index = i;
         Product product = ProductList.Products[i];
+        FilePath = product.ImagePath;
+        Image.Source = new Bitmap(FilePath);
         Name.Text = product.Name;
         Amount.Text = product.Amount.ToString();
         Manufacturer.Text = product.Manufacturer;
@@ -35,7 +40,7 @@ public partial class Edit : Window
 
     }
     int index = -1;
-    private string fileToCopy;
+    string FilePath;
 
     public void Add(object sender, RoutedEventArgs args)
     {
@@ -51,6 +56,7 @@ public partial class Edit : Window
         {
             AllGood = false;
         }
+        tmp.ImagePath = FilePath;
         tmp.Unit = ProductList.UnitType[Unit.SelectedIndex];
         tmp.Category = ProductList.Categories[Category.SelectedIndex];
         tmp.Description = Description.Text;
@@ -71,9 +77,21 @@ public partial class Edit : Window
     }
     public async void Pict(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
+        string fileToCopy;
         OpenFileDialog openFileDialog = new OpenFileDialog();
         var topLevel = await openFileDialog.ShowAsync(this);
         fileToCopy = String.Join("", topLevel);
-        File.Copy(fileToCopy, $"{Environment.CurrentDirectory}\\Assets\\");
+        if (fileToCopy != "")
+        {
+            string name = Path.GetFileName(fileToCopy);
+            File.Copy(fileToCopy, $"{Environment.CurrentDirectory}\\Assets\\{name}");
+            FilePath = $"{Environment.CurrentDirectory}\\Assets\\{name}";
+            Image.Source = new Bitmap(FilePath);
+        }
+        else
+        {
+            FilePath = $"{Environment.CurrentDirectory}\\default.png";
+            Image.Source = new Bitmap(FilePath);
+        }
     }
 }

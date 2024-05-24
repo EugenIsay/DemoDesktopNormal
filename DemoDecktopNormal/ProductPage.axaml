@@ -27,6 +27,7 @@
 			<ListBox.ItemTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+						<Image MaxHeight="300" Source="{Binding Image}"/>
 						<StackPanel Orientation="Vertical">
 							<StackPanel Orientation="Horizontal">
 								<TextBlock Text=" Название:"/>

@@ -47,7 +47,9 @@ public partial class ProductPage : Window
     }
     public async void Delete(object sender, RoutedEventArgs args)
     {
-        await Task.Delay(100);
+        await Task.Delay(300);
+        Man.ItemsSource = ProductList.Manufacturers.ToList();
+        Man.SelectedIndex = 0;
         BoxList.ItemsSource = ProductList.ShownProducts.ToList();
     }
 
