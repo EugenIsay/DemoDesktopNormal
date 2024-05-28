@@ -21,6 +21,7 @@ using System.Collections.ObjectModel;
 using Avalonia.Controls;
 using Avalonia;
 using System.IO;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DemoDecktopNormal
 {
@@ -56,7 +57,7 @@ namespace DemoDecktopNormal
                 Manufacturers.Add(product.Manufacturer);
             }
             string tmp = Products[i].Manufacturer;
-            if (File.Exists(Products[i].ImagePath) && Products[i].ImagePath != $"{Environment.CurrentDirectory}\\default.png")
+            if (File.Exists(Products[i].ImagePath) && Products[i].ImagePath != $"{Environment.CurrentDirectory}\\default.png" && Products[i].ImagePath != product.ImagePath)
             {
                 File.Delete(Products[i].ImagePath);
             }
@@ -104,6 +105,14 @@ namespace DemoDecktopNormal
                 Manufacturers.Remove(tmp);
             }
             Fill(Products);
+        }
+        public static void Search(string MyString)
+        {
+            //var result = array1.Any(array2.Contains);
+            List<Product> tmp = new List<Product>();
+            tmp = Products.FindAll(p => p.Name == MyString || p.Description == MyString || p.Amount.ToString() == MyString 
+            || p.Price.ToString() == MyString || p.Manufacturer == MyString || p.Unit == MyString || p.Category == MyString);
+            Fill(tmp);
         }
     }
     public class Product

@@ -13,6 +13,16 @@ namespace DemoDecktopNormal
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
+            var folderPath = $"{Environment.CurrentDirectory}\\Assets";
+            System.IO.DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
+            foreach (FileInfo file in folderInfo.GetFiles())
+            {
+                file.Delete();
+            }
+            foreach (DirectoryInfo dir in folderInfo.GetDirectories())
+            {
+                dir.Delete(true);
+            }
         }
 
         public override void OnFrameworkInitializationCompleted()
@@ -30,7 +40,6 @@ namespace DemoDecktopNormal
         {
             var folderPath = $"{Environment.CurrentDirectory}\\Assets";
             System.IO.DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
-
             foreach (FileInfo file in folderInfo.GetFiles())
             {
                 file.Delete();
@@ -39,6 +48,7 @@ namespace DemoDecktopNormal
             {
                 dir.Delete(true);
             }
+
         }
     }
 }

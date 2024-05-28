@@ -10,7 +10,7 @@ namespace DemoDecktopNormal
     {
         public static List<User> AllUsers = new List<User>();
 
-        public static int Current { get ; set ; }
+        public static int Current { get; set; }
 
         public static void Adduser(string Name, string Role, string Password)
         {
@@ -27,6 +27,11 @@ namespace DemoDecktopNormal
             {
                 return false;
             }
+        }
+        public static bool IsAvalible
+        {
+            get { return AllUsers[Current].Role == "admin"; }
+
         }
     }
     public class User

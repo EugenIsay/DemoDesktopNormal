@@ -16,7 +16,9 @@ public partial class ProductPage : Window
             Man.ItemsSource = ProductList.Manufacturers.ToList();
             Man.SelectedIndex = 0;
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+            
         }
+        UserName.Text = Users.AllUsers[Users.Current].Name;
     }
     public void Add(object sender, RoutedEventArgs args)
     {
@@ -57,5 +59,23 @@ public partial class ProductPage : Window
     {
         ProductList.ProductFiltration(Man.SelectedIndex);
         BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+
+    }
+
+    private void TextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e)
+    {
+        if (Find.Text != string.Empty)
+        {
+            Man.SelectedIndex = 0;
+            ProductList.Search(Find.Text);
+            BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+        }
+        else
+        {
+            Man.SelectedIndex = 0;
+            ProductList.Fill(ProductList.Products);
+            BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+
+        }
     }
 }

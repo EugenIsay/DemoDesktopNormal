@@ -26,6 +26,7 @@
 				<TextBox Name="Description" />
 				<Button Content="Добавить картинку " Click="Pict" />
 				<Button Content="Подтвердить " Click="Add" />
+				<TextBlock Name="Wrong" Foreground="Red" />
 			</StackPanel>
 			<Image Name="Image"  MaxHeight="300"  />
 		</StackPanel>

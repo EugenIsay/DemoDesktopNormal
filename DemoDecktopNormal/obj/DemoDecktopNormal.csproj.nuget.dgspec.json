@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {}
+    "C:\\Users\\prdb\\Desktop\\tmp\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {
+    "C:\\Users\\prdb\\Desktop\\tmp\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
+        "projectUniqueName": "C:\\Users\\prdb\\Desktop\\tmp\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
         "projectName": "DemoDecktopNormal",
-        "projectPath": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
-        "packagesPath": "C:\\Users\\profi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\profi\\Desktop\\IsayProj\\DemoDesktop\\DemoDecktopNormal\\obj\\",
+        "projectPath": "C:\\Users\\prdb\\Desktop\\tmp\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
+        "packagesPath": "C:\\Users\\prdb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prdb\\Desktop\\tmp\\DemoDecktopNormal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\profi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\prdb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
