@@ -4,62 +4,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DemoDecktopNormal.ProductPage"
-		x:CompileBindings="False"
-		xmlns:local="clr-namespace:DemoDecktopNormal"
+        x:CompileBindings="False"
+        xmlns:local="clr-namespace:DemoDecktopNormal"
         Title="ProductPage">
-	<DockPanel VerticalAlignment="Stretch" LastChildFill="True">
-		<StackPanel DockPanel.Dock="Top" Margin="20, 10" Orientation="Vertical">
-			<TextBlock HorizontalAlignment="Right" />
-			<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-				<TextBlock Name="UserName"/>
-				<Button Click="Exit" Content="Выход"  />
-				
-			</StackPanel>
-			<TextBox Name="Find" TextChanged="TextBox_TextChanged" />
-			<StackPanel>
-				<StackPanel Orientation="Horizontal">
-					<TextBlock Text="Сортировка по цене"/>
-					<Button Click="Ascending" Content="По возрастанию" />
-					<Button Click="Descending" Content="По убыванию" />
-				</StackPanel>
-				<ComboBox SelectionChanged="ComboBox_SelectionChanged" Name="Man"/>
-			</StackPanel>
-		</StackPanel>
-		<Button IsVisible="{x:Static local:Users.IsAvalible}"  Margin="20" DockPanel.Dock="Bottom" Click="Add" Content="Добавить товар" />
-		<ListBox Name="BoxList" Margin="20,0" DockPanel.Dock="Top">
-			<ListBox.ItemTemplate>
-				<DataTemplate>
-					<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-						<Image MaxHeight="300" Source="{Binding Image}"/>
-						<StackPanel Orientation="Vertical">
-							<StackPanel Orientation="Horizontal">
-								<TextBlock Text=" Название:"/>
-								<TextBlock Text="{Binding Name}"/>
-							</StackPanel>
-							<StackPanel Orientation="Horizontal">
-								<TextBlock Text=" Цена:"/>
-								<TextBlock Text="{Binding Price}"/>
-							</StackPanel>
-							<StackPanel Orientation="Horizontal">
-								<TextBlock Text=" Количество:"/>
-								<TextBlock Text="{Binding Amount}"/>
-								<TextBlock Text="{Binding Unit}"/>
-							</StackPanel>
-							<StackPanel Orientation="Horizontal">
-								<TextBlock Text=" Категория:"/>
-								<TextBlock Text="{Binding Category}"/>
-							</StackPanel>
-							<StackPanel Orientation="Horizontal">
-								<TextBlock Text=" Производитель:"/>
-								<TextBlock Text="{Binding Manufacturer}"/>
-							</StackPanel>
-						</StackPanel>
-						<Button Margin="20, 0" IsVisible="{x:Static local:Users.IsAvalible}"  Command="{Binding Redact}" Click="Redact" Content="Редактировать" />
-						<Button Margin="20, 0" IsVisible="{x:Static local:Users.IsAvalible}" Content="Удалить" Click="Delete" Command="{Binding Delete}" />
-					</StackPanel>
-				</DataTemplate>
-			</ListBox.ItemTemplate>
-		</ListBox>
+    <DockPanel VerticalAlignment="Stretch" LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top" Margin="20, 10" Orientation="Vertical">
+            <TextBlock HorizontalAlignment="Right" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Name="UserName" />
+                <Button Click="Exit" Content="Выход" />
 
-	</DockPanel>
+            </StackPanel>
+            <TextBox Name="Find" TextChanged="TextBox_TextChanged" />
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Сортировка по цене" />
+                    <Button Click="Ascending" Content="По возрастанию" />
+                    <Button Click="Descending" Content="По убыванию" />
+                </StackPanel>
+                <ComboBox SelectionChanged="ComboBox_SelectionChanged" Name="Man" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
+            <Button IsVisible="{x:Static local:Users.IsAvalible}" Margin="20"  Click="Add"
+                    Content="Добавить товар" />
+            <Button Click="Buy" Content="В корзину" />
+        </StackPanel>
+        <ListBox DoubleTapped="BoxList_OnDoubleTapped" Name="BoxList" Margin="20,0" DockPanel.Dock="Top">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel  Background="{Binding Color}" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Image MaxHeight="300" Source="{Binding Image}" />
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Название:" />
+                                <TextBlock Text="{Binding Name}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Цена:" />
+                                <TextBlock Text="{Binding Price}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Количество:" />
+                                <TextBlock Text="{Binding Amount}" />
+                                <TextBlock Text="{Binding Unit}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Категория:" />
+                                <TextBlock Text="{Binding Category}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Производитель:" />
+                                <TextBlock Text="{Binding Manufacturer}" />
+                            </StackPanel>
+                        </StackPanel>
+                        <Button Margin="20, 0" IsVisible="{x:Static local:Users.IsAvalible}" Content="Удалить"
+                                Click="Delete" Command="{Binding Delete}" />
+                        <Border Margin="20, 50" BorderThickness="2" BorderBrush="Black" VerticalAlignment="Stretch"
+                                HorizontalAlignment="Stretch">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <TextBlock IsVisible="{Binding IsAvailble}" Text="Товар доступен на складе" />
+                                <TextBlock IsVisible="{Binding !IsAvailble}" Text="Товар недоступен на складе" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </DockPanel>
 </Window>

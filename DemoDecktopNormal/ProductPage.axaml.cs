@@ -1,7 +1,9 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System.Linq;
 using System.Threading.Tasks;
+using Avalonia.Input;
 
 namespace DemoDecktopNormal;
 
@@ -47,6 +49,11 @@ public partial class ProductPage : Window
         await Task.Delay(100);
         this.Close();
     }
+    public async void Redact()
+    {
+        await Task.Delay(100);
+        this.Close();
+    }
     public async void Delete(object sender, RoutedEventArgs args)
     {
         await Task.Delay(300);
@@ -76,6 +83,33 @@ public partial class ProductPage : Window
             ProductList.Fill(ProductList.Products);
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
 
+        }
+    }
+
+    private void Buy(object? sender, RoutedEventArgs e)
+    {
+        new Buy().Show();
+        Close();
+    }
+
+    private void BoxList_OnDoubleTapped(object? sender, TappedEventArgs e)
+    {
+        int i = BoxList.SelectedIndex;
+        if (i != -1)
+        {
+            if (Users.IsAvalible)
+            {
+                ProductList.ShownProducts[i].Redact();
+                Redact();
+            }
+            else
+            {
+                BuyProd tmp = new BuyProd { BuyProduct = ProductList.Products[ProductList.ShownProducts[i].FindMyInd], User = Users.Current};
+                if (Users.BuyList.Where(p => p.BuyProduct == tmp.BuyProduct).Count() == 0)
+                {
+                    Users.BuyList.Add(tmp);
+                }
+            }
         }
     }
 }

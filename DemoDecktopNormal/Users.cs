@@ -9,12 +9,18 @@ namespace DemoDecktopNormal
     public static class Users
     {
         public static List<User> AllUsers = new List<User>();
+        public static List<BuyProd> BuyList = new List<BuyProd>();
 
         public static int Current { get; set; }
 
         public static void Adduser(string Name, string Role, string Password)
         {
             AllUsers.Add(new User() { Name = Name, Role = Role, Password = Password });
+        }
+
+        public static void DelItem(int i)
+        {
+            BuyList.RemoveAt(i);
         }
         public static bool Check(string Name, string Password)
         {
@@ -39,5 +45,20 @@ namespace DemoDecktopNormal
         public string Name { get; set; }
         public string Role { get; set; }
         public string Password { get; set; }
+    }
+    public class BuyProd
+    {
+        public int User { get; set; }
+        public Product BuyProduct { get; set; }
+
+        public int FindMyId
+        {
+            get => Users.BuyList.IndexOf(Users.BuyList.FirstOrDefault(po =>
+                po.User == User && po.BuyProduct == BuyProduct));
+        }
+        public void Delete()
+        {
+            Users.DelItem(FindMyId);
+        }
     }
 }

@@ -13,18 +13,21 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DemoDecktopNormal
-build_property.ProjectDir = C:\Users\prdb\Desktop\tmp\DemoDecktopNormal\
+build_property.ProjectDir = C:\Users\PROFI\Desktop\IsayProj\DemoDecktopNormal\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/prdb/Desktop/tmp/DemoDecktopNormal/App.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDecktopNormal/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/prdb/Desktop/tmp/DemoDecktopNormal/Edit.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDecktopNormal/Buy.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/prdb/Desktop/tmp/DemoDecktopNormal/MainWindow.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDecktopNormal/Edit.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/prdb/Desktop/tmp/DemoDecktopNormal/ProductPage.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDecktopNormal/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/PROFI/Desktop/IsayProj/DemoDecktopNormal/ProductPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

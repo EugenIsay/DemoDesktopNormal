@@ -1,0 +1,55 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="DemoDecktopNormal.Buy"
+        x:CompileBindings="False"
+        Title="Buy">
+
+    <DockPanel VerticalAlignment="Stretch" LastChildFill="True">
+        <StackPanel DockPanel.Dock="Top" Margin="20, 10" Orientation="Vertical">
+            <TextBlock Text="Корзина пользователя" HorizontalAlignment="Right" />
+            <TextBlock Text="" HorizontalAlignment="Right" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <TextBlock Name="UserName" />
+                <Button Click="Exit" Content="Выход" />
+            </StackPanel>
+        </StackPanel>
+        <ListBox Name="BoxList" Margin="20,0" DockPanel.Dock="Top">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Background="{Binding Color}" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Image MaxHeight="300" Source="{Binding Image}" />
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Название:" />
+                                <TextBlock Text="{Binding BuyProduct.Name}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Цена:" />
+                                <TextBlock Text="{Binding BuyProduct.Price}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Количество:" />
+                                <TextBlock Text="{Binding BuyProduct.Amount}" />
+                                <TextBlock Text="{Binding BuyProduct.Unit}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Категория:" />
+                                <TextBlock Text="{Binding BuyProduct.Category}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text=" Производитель:" />
+                                <TextBlock Text="{Binding BuyProduct.Manufacturer}" />
+                            </StackPanel>
+                            <Button Content="Удалить из корзины" Click="Delete" Command="{Binding Delete}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </DockPanel>
+
+</Window>

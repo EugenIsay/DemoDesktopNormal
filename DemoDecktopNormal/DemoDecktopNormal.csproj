@@ -20,4 +20,10 @@
   <ItemGroup>
     <Folder Include="Assets\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="NewFile.axaml.cs">
+      <DependentUpon>NewFile1.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
