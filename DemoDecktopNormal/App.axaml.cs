@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Controls.Shapes;
 using Avalonia.Markup.Xaml;
 using Avalonia.Styling;
 using System;
@@ -13,7 +14,13 @@ namespace DemoDecktopNormal
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
+
             var folderPath = $"{Environment.CurrentDirectory}\\Assets";
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
             System.IO.DirectoryInfo folderInfo = new DirectoryInfo(folderPath);
             foreach (FileInfo file in folderInfo.GetFiles())
             {

@@ -1,14 +1,9 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
-using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using System;
 using System.IO;
-using System.Reflection;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace DemoDecktopNormal;
 
@@ -102,6 +97,8 @@ public partial class Edit : Window
         else
         {
             FilePath = $"{Environment.CurrentDirectory}\\default.png";
+            Bitmap btm = new Bitmap(FilePath);
+            Bitmap.DecodeToWidth(btm.LoadCoverBitmapAsync(), 400);
             Image.Source = new Bitmap(FilePath);
         }
     }
