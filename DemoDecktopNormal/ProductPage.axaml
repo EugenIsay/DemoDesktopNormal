@@ -9,11 +9,11 @@
         Title="ProductPage">
     <DockPanel VerticalAlignment="Stretch" LastChildFill="True">
         <StackPanel DockPanel.Dock="Top" Margin="20, 10" Orientation="Vertical">
+			<TextBlock HorizontalAlignment="Left" Name="Nums" />
             <TextBlock HorizontalAlignment="Right" />
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Name="UserName" />
                 <Button Click="Exit" Content="Выход" />
-
             </StackPanel>
             <TextBox Name="Find" TextChanged="TextBox_TextChanged" />
             <StackPanel>

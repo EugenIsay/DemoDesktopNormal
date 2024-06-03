@@ -16,6 +16,10 @@ namespace DemoDecktopNormal
         public static List<string> Manufacturers = new List<string>() { "Все производители" };
         public static string[] Categories = { "Овощи", "Фрукты", "Мясо", "Бытовая техника", "Инструменты", "Другое" };
         public static string[] UnitType = { "Штук", "Грамм", "Килограмм", "Литров" };
+        public static string Nums
+        {
+            get => $"{ShownProducts.Count()} из {Products.Count()}";
+        }
 
         public static void Fill(List<Product> List)
         {

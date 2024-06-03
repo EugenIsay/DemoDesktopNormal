@@ -9,6 +9,8 @@
 	<Border Background="White" BorderBrush="BlueViolet" BorderThickness="2">
 		<StackPanel Orientation="Horizontal">
 			<StackPanel Margin="10">
+				<TextBlock Text="Айди товара "/>
+				<TextBlock Name="Id"/>
 				<TextBlock Text="Название товара "/>
 				<TextBox Name="Name"/>
 				<TextBlock Text="Количество "/>

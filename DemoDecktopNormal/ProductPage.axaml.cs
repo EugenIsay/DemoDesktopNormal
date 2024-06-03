@@ -18,7 +18,9 @@ public partial class ProductPage : Window
             Man.ItemsSource = ProductList.Manufacturers.ToList();
             Man.SelectedIndex = 0;
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
-            
+            Nums.Text = ProductList.Nums;
+
+
         }
         UserName.Text = Users.AllUsers[Users.Current].Name;
     }
@@ -60,12 +62,14 @@ public partial class ProductPage : Window
         Man.ItemsSource = ProductList.Manufacturers.ToList();
         Man.SelectedIndex = 0;
         BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+        Nums.Text = ProductList.Nums;
     }
 
     private void ComboBox_SelectionChanged(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)
     {
         ProductList.ProductFiltration(Man.SelectedIndex);
         BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+        Nums.Text = ProductList.Nums;
 
     }
 
@@ -76,12 +80,14 @@ public partial class ProductPage : Window
             Man.SelectedIndex = 0;
             ProductList.Search(Find.Text);
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+            Nums.Text = ProductList.Nums;
         }
         else
         {
             Man.SelectedIndex = 0;
             ProductList.Fill(ProductList.Products);
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+            Nums.Text = ProductList.Nums;
 
         }
     }

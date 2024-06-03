@@ -3,6 +3,7 @@ using Avalonia.Interactivity;
 using Avalonia.Media.Imaging;
 using System;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace DemoDecktopNormal;
@@ -16,12 +17,14 @@ public partial class Edit : Window
         Category.ItemsSource = ProductList.Categories;
         FilePath = $"{Environment.CurrentDirectory}\\default.png";
         Image.Source = new Bitmap(FilePath);
+        Id.Text = ProductList.Products.Count().ToString();
     }
     public Edit(int i)
     {
         InitializeComponent();
         Unit.ItemsSource = ProductList.UnitType;
         Category.ItemsSource = ProductList.Categories;
+        Id.Text = i.ToString();
         index = i;
         Product product = ProductList.Products[i];
         FilePath = product.ImagePath;
@@ -98,7 +101,7 @@ public partial class Edit : Window
         {
             FilePath = $"{Environment.CurrentDirectory}\\default.png";
             Bitmap btm = new Bitmap(FilePath);
-            Bitmap.DecodeToWidth(btm.LoadCoverBitmapAsync(), 400);
+            //Bitmap.DecodeToWidth(btm.LoadCoverBitmapAsync(), 400);
             Image.Source = new Bitmap(FilePath);
         }
     }
