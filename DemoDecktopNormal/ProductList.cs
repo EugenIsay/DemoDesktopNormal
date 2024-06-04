@@ -119,22 +119,20 @@ namespace DemoDecktopNormal
                 {
                     Find.Add(str[cur]);
                 }
-                else
+                else if (Find.Count() != 0)
                 {
-                    
                     string f = new string(Find.ToArray());
                     f = f.ToLower();
                     tmp.AddRange(Products.Where(
-                        p => p.Name.Contains(f) || p.Description.ToLower().Contains(f)
+                        p => (p.Name.Contains(f) || p.Description.ToLower().Contains(f)
                                                 || p.Category.ToLower().Contains(f)
                                                 || p.Price.ToString().ToLower().Contains(f)
                                                 || p.Amount.ToString().ToLower().Contains(f)
                                                 || p.Unit.ToLower().Contains(f)
-                                                || p.Manufacturer.ToLower().Contains(f)).ToList());
+                                                || p.Manufacturer.ToLower().Contains(f)) && tmp.Where(i => i.FindMyInd == p.FindMyInd).Count() == 0).ToList());
                     Find.Clear();
                 }
             }
-
             Fill(tmp);
         }
     }

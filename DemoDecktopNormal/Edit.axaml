@@ -28,6 +28,7 @@
 				<TextBox Name="Description" />
 				<Button Content="Добавить картинку " Click="Pict" />
 				<Button Content="Подтвердить " Click="Add" />
+				<Button Content="Отменить" Margin="0,10" Click="Сlose" />
 				<TextBlock Name="Wrong" Foreground="Red" />
 			</StackPanel>
 			<Image Name="Image"  MaxHeight="300"  />

@@ -39,6 +39,11 @@ namespace DemoDecktopNormal
             get { return AllUsers[Current].Role == "admin"; }
 
         }
+        public static bool IsNotAvalible
+        {
+            get { return AllUsers[Current].Role != "admin"; }
+
+        }
     }
     public class User
     {

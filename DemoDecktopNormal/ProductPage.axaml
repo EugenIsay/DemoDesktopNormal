@@ -28,14 +28,18 @@
         <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal">
             <Button IsVisible="{x:Static local:Users.IsAvalible}" Margin="20"  Click="Add"
                     Content="Добавить товар" />
-            <Button Click="Buy" Content="В корзину" />
+            <Button IsVisible="{x:Static local:Users.IsNotAvalible}" Click="Buy" Content="В корзину" />
         </StackPanel>
         <ListBox DoubleTapped="BoxList_OnDoubleTapped" Name="BoxList" Margin="20,0" DockPanel.Dock="Top">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel  Background="{Binding Color}" Orientation="Horizontal" VerticalAlignment="Center">
-                        <Image MaxHeight="300" Source="{Binding Image}" />
-                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <Grid HorizontalAlignment="Stretch"  Background="{Binding Color}" ColumnDefinitions="1*, 1*, 1*, 1*">
+                        <Image HorizontalAlignment="Left" Height="300" Width="400" Source="{Binding Image}" Grid.Column="0" >
+                            <Image.Stretch>
+                                <Stretch>UniformToFill</Stretch> 
+                            </Image.Stretch>
+                        </Image>
+                        <StackPanel HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text=" Название:" />
                                 <TextBlock Text="{Binding Name}" />
@@ -45,29 +49,32 @@
                                 <TextBlock Text="{Binding Price}" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock Text=" Количество:" />
-                                <TextBlock Text="{Binding Amount}" />
-                                <TextBlock Text="{Binding Unit}" />
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal">
                                 <TextBlock Text=" Категория:" />
                                 <TextBlock Text="{Binding Category}" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text=" Производитель:" />
                                 <TextBlock Text="{Binding Manufacturer}" />
+                            </StackPanel>                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Описание:" />
+                                <TextBlock Text="{Binding Description}" />
                             </StackPanel>
                         </StackPanel>
-                        <Button Margin="20, 0" IsVisible="{x:Static local:Users.IsAvalible}" Content="Удалить"
-                                Click="Delete" Command="{Binding Delete}" />
-                        <Border Margin="20, 50" BorderThickness="2" BorderBrush="Black" VerticalAlignment="Stretch"
+                        <StackPanel HorizontalAlignment="Center" IsVisible="{x:Static local:Users.IsAvalible}" Grid.Column="2">
+                            <Button Margin="20, 0"  Content="Удалить"
+                                    Click="Delete" Command="{Binding Delete}" />
+                        </StackPanel>
+                        <Border Grid.Column="3" Margin="20, 50" BorderThickness="2" BorderBrush="Black" VerticalAlignment="Stretch"
                                 HorizontalAlignment="Stretch">
-                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
-                                <TextBlock IsVisible="{Binding IsAvailble}" Text="Товар доступен на складе" />
-                                <TextBlock IsVisible="{Binding !IsAvailble}" Text="Товар недоступен на складе" />
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text=" Количество:" />
+                                    <TextBlock Text="{Binding Amount}" />
+                                    <TextBlock Text="{Binding Unit}" />
+                                </StackPanel>
                             </StackPanel>
                         </Border>
-                    </StackPanel>
+                    </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

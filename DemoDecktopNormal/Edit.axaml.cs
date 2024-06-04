@@ -105,4 +105,9 @@ public partial class Edit : Window
             Image.Source = new Bitmap(FilePath);
         }
     }
+    private void Ñlose(object? sender, RoutedEventArgs e)
+    {
+        new ProductPage().Show();
+        this.Close();
+    }
 }

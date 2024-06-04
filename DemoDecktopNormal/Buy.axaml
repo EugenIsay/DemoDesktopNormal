@@ -45,6 +45,7 @@
                             </StackPanel>
                             <Button Content="Удалить из корзины" Click="Delete" Command="{Binding Delete}"/>
                         </StackPanel>
+                        <Image Source="{Binding BuyProduct.Image}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
