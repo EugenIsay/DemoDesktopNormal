@@ -112,7 +112,9 @@ namespace DemoDecktopNormal
         {
             Char[] str = MyString.ToCharArray();
             List<char> Find = new List<char>();
-            List<Product> tmp = new List<Product>();
+            List<Product> tmp = Products.Where(p => p == p).ToList();
+            List<string> strings = new List<string>();
+
             for (int cur = 0; cur < str.Length + 1; cur++)
             {
                 if (cur != str.Length && str[cur] != ' ')
@@ -123,15 +125,19 @@ namespace DemoDecktopNormal
                 {
                     string f = new string(Find.ToArray());
                     f = f.ToLower();
-                    tmp.AddRange(Products.Where(
-                        p => (p.Name.Contains(f) || p.Description.ToLower().Contains(f)
-                                                || p.Category.ToLower().Contains(f)
-                                                || p.Price.ToString().ToLower().Contains(f)
-                                                || p.Amount.ToString().ToLower().Contains(f)
-                                                || p.Unit.ToLower().Contains(f)
-                                                || p.Manufacturer.ToLower().Contains(f)) && tmp.Where(i => i.FindMyInd == p.FindMyInd).Count() == 0).ToList());
-                    Find.Clear();
+                    strings.Add(f);
+
                 }
+            }
+            foreach (string f in strings) 
+            {
+                tmp = tmp.Where(
+                p => p.Name.Contains(f) || p.Description.ToLower().Contains(f)
+                || p.Category.ToLower().Contains(f)
+                || p.Price.ToString().ToLower().Contains(f)
+                || p.Amount.ToString().ToLower().Contains(f)
+                || p.Unit.ToLower().Contains(f)
+                || p.Manufacturer.ToLower().Contains(f)).ToList();
             }
             Fill(tmp);
         }
