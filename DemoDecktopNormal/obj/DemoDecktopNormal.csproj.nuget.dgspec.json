@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {}
+    "C:\\Users\\PROFI\\Desktop\\IsayProj\\DemoDesktopNormal\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {
+    "C:\\Users\\PROFI\\Desktop\\IsayProj\\DemoDesktopNormal\\DemoDecktopNormal\\DemoDecktopNormal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
+        "projectUniqueName": "C:\\Users\\PROFI\\Desktop\\IsayProj\\DemoDesktopNormal\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
         "projectName": "DemoDecktopNormal",
-        "projectPath": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
-        "packagesPath": "C:\\Users\\zheka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zheka\\Desktop\\Projects\\DemoDesktop\\DemoDecktopNormal\\obj\\",
+        "projectPath": "C:\\Users\\PROFI\\Desktop\\IsayProj\\DemoDesktopNormal\\DemoDecktopNormal\\DemoDecktopNormal.csproj",
+        "packagesPath": "C:\\Users\\PROFI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PROFI\\Desktop\\IsayProj\\DemoDesktopNormal\\DemoDecktopNormal\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zheka\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\PROFI\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -86,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

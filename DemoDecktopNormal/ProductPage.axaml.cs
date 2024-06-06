@@ -9,17 +9,18 @@ namespace DemoDecktopNormal;
 
 public partial class ProductPage : Window
 {
+    public string[] Srt = new string[] { "Без сортировки", "По уменьшению", "По увеличению" };
     public ProductPage()
     {
-
         InitializeComponent();
         if (ProductList.ShownProducts.Count != 0)
         {
             Man.ItemsSource = ProductList.Manufacturers.ToList();
-            Man.SelectedIndex = 0;
+            Man.SelectedIndex = 0;            
+            Sort.ItemsSource = Srt;
+            Sort.SelectedIndex = 0;
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
             Nums.Text = ProductList.Nums;
-
 
         }
         UserName.Text = Users.AllUsers[Users.Current].Name;
@@ -35,16 +36,6 @@ public partial class ProductPage : Window
         Users.Current = 0;
         new MainWindow().Show();
         this.Close();
-    }
-    public void Descending(object sender, RoutedEventArgs args)
-    {
-        ProductList.Descending();
-        BoxList.ItemsSource = ProductList.ShownProducts.ToList();
-    }
-    public void Ascending(object sender, RoutedEventArgs args)
-    {
-        ProductList.Ascending();
-        BoxList.ItemsSource = ProductList.ShownProducts.ToList();
     }
     public async void Redact(object sender, RoutedEventArgs args)
     {
@@ -65,6 +56,12 @@ public partial class ProductPage : Window
         Nums.Text = ProductList.Nums;
     }
 
+    private void SelectionBox_SelectionChanged(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)
+    {
+        ProductList.Sort(Sort.SelectedIndex);
+        BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+
+    }
     private void ComboBox_SelectionChanged(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)
     {
         ProductList.ProductFiltration(Man.SelectedIndex);
@@ -77,18 +74,15 @@ public partial class ProductPage : Window
     {
         if (Find.Text != string.Empty)
         {
-            Man.SelectedIndex = 0;
             ProductList.Search(Find.Text);
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
             Nums.Text = ProductList.Nums;
         }
         else
         {
-            Man.SelectedIndex = 0;
             ProductList.Fill(ProductList.Products);
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
             Nums.Text = ProductList.Nums;
-
         }
     }
 

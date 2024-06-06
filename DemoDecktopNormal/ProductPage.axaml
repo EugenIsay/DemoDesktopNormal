@@ -3,6 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Name="Window"
         x:Class="DemoDecktopNormal.ProductPage"
         x:CompileBindings="False"
         xmlns:local="clr-namespace:DemoDecktopNormal"
@@ -17,11 +18,7 @@
             </StackPanel>
             <TextBox Name="Find" TextChanged="TextBox_TextChanged" />
             <StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Сортировка по цене" />
-                    <Button Click="Ascending" Content="По возрастанию" />
-                    <Button Click="Descending" Content="По убыванию" />
-                </StackPanel>
+                <ComboBox SelectionChanged="SelectionBox_SelectionChanged" Name="Sort" />
                 <ComboBox SelectionChanged="ComboBox_SelectionChanged" Name="Man" />
             </StackPanel>
         </StackPanel>
@@ -34,7 +31,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid HorizontalAlignment="Stretch"  Background="{Binding Color}" ColumnDefinitions="1*, 1*, 1*, 1*">
-                        <Image HorizontalAlignment="Left" Height="300" Width="400" Source="{Binding Image}" Grid.Column="0" >
+                        <Image Name="Image" HorizontalAlignment="Left" Height="300" Width="400"  Source="{Binding Image}" Grid.Column="0" >
                             <Image.Stretch>
                                 <Stretch>UniformToFill</Stretch> 
                             </Image.Stretch>
@@ -60,8 +57,8 @@
                                 <TextBlock Text="{Binding Description}" />
                             </StackPanel>
                         </StackPanel>
-                        <StackPanel HorizontalAlignment="Center" IsVisible="{x:Static local:Users.IsAvalible}" Grid.Column="2">
-                            <Button Margin="20, 0"  Content="Удалить"
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" IsVisible="{x:Static local:Users.IsAvalible}" Grid.Column="2">
+                            <Button Margin="20, 0"  Content="Удалить" 
                                     Click="Delete" Command="{Binding Delete}" />
                         </StackPanel>
                         <Border Grid.Column="3" Margin="20, 50" BorderThickness="2" BorderBrush="Black" VerticalAlignment="Stretch"

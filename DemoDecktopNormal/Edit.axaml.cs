@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Avalonia.Media;
 
 namespace DemoDecktopNormal;
 
@@ -48,15 +49,39 @@ public partial class Edit : Window
     string FilePath;
     static int im = 0;
 
+    public async void WrongProperty(TextBox box)
+    {
+        box.Background = Brushes.Salmon;
+        box.Foreground = Brushes.Crimson;
+        await Task.Delay(1000);
+        box.Background = Brushes.White;
+        box.Foreground = Brushes.Black;
+    }
     public void Add(object sender, RoutedEventArgs args)
     {
         bool AllGood = true;
         Product tmp = new Product();
         try
         {
-            tmp.Name = Name.Text;
+            tmp.Amount = Convert.ToInt32(Amount.Text);
+        }
+        catch
+        {
+            WrongProperty(Amount);
+        }
+        try
+        {
+            tmp.Price = Convert.ToDecimal(Price.Text);
+        }
+        catch 
+        {
+            WrongProperty(Price);
+        }
+        try
+        {
             tmp.Amount = Convert.ToInt32(Amount.Text);
             tmp.Price = Convert.ToDecimal(Price.Text);
+            tmp.Name = Name.Text;
             tmp.ImagePath = FilePath;
             tmp.Unit = ProductList.UnitType[Unit.SelectedIndex];
             tmp.Category = ProductList.Categories[Category.SelectedIndex];

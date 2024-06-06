@@ -13,21 +13,21 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DemoDecktopNormal
-build_property.ProjectDir = C:\Users\zheka\Desktop\Projects\DemoDesktop\DemoDecktopNormal\
+build_property.ProjectDir = C:\Users\PROFI\Desktop\IsayProj\DemoDesktopNormal\DemoDecktopNormal\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/zheka/Desktop/Projects/DemoDesktop/DemoDecktopNormal/App.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDesktopNormal/DemoDecktopNormal/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/zheka/Desktop/Projects/DemoDesktop/DemoDecktopNormal/Buy.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDesktopNormal/DemoDecktopNormal/Buy.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/zheka/Desktop/Projects/DemoDesktop/DemoDecktopNormal/Edit.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDesktopNormal/DemoDecktopNormal/Edit.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/zheka/Desktop/Projects/DemoDesktop/DemoDecktopNormal/MainWindow.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDesktopNormal/DemoDecktopNormal/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/zheka/Desktop/Projects/DemoDesktop/DemoDecktopNormal/ProductPage.axaml]
+[C:/Users/PROFI/Desktop/IsayProj/DemoDesktopNormal/DemoDecktopNormal/ProductPage.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
