@@ -70,23 +70,24 @@ namespace DemoDecktopNormal
         public static void Sort(int id)
         {
             _sortID = id;
-            Fill(Sort(Products));
+            Fill(Sort(MainSearch(MainProductFiltration(Products))));
         }
         public static List<Product> Sort(List<Product> MyList)
         {
             switch (_sortID)
             {
                 case 1:
-                    MyList = ShownProducts.OrderByDescending(p => p.Price).ToList();
+                    MyList = MyList.OrderByDescending(p => p.Price).ToList();
                     break;
                 case 2: 
-                    MyList = ShownProducts.OrderBy(p => p.Price).ToList();
+                    MyList = MyList.OrderBy(p => p.Price).ToList();
                     break;
             }
 
             return MyList;
         }
 
+        
         public static void ProductFiltration(int i)
         {
             _filterID = i;
@@ -145,12 +146,12 @@ namespace DemoDecktopNormal
                 foreach (string f in strings) 
                 {
                     tmp = tmp.Where(
-                        p => p.Name.Contains(f) || p.Description.ToLower().Contains(f)
-                                                || p.Category.ToLower().Contains(f)
-                                                || p.Price.ToString().ToLower().Contains(f)
-                                                || p.Amount.ToString().ToLower().Contains(f)
-                                                || p.Unit.ToLower().Contains(f)
-                                                || p.Manufacturer.ToLower().Contains(f)).ToList();
+                        p => p.Name.ToLower().Contains(f) || p.Description.ToLower().Contains(f)
+                                                        || p.Category.ToLower().Contains(f)
+                                                        || p.Price.ToString().ToLower().Contains(f)
+                                                        || p.Amount.ToString().ToLower().Contains(f)
+                                                        || p.Unit.ToLower().Contains(f)
+                                                        || p.Manufacturer.ToLower().Contains(f)).ToList();
                 }
                 return tmp;
             }

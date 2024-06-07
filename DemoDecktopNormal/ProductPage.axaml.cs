@@ -10,21 +10,23 @@ namespace DemoDecktopNormal;
 public partial class ProductPage : Window
 {
     public string[] Srt = new string[] { "Без сортировки", "По уменьшению", "По увеличению" };
+
     public ProductPage()
     {
         InitializeComponent();
         if (ProductList.ShownProducts.Count != 0)
         {
             Man.ItemsSource = ProductList.Manufacturers.ToList();
-            Man.SelectedIndex = 0;            
+            Man.SelectedIndex = 0;
             Sort.ItemsSource = Srt;
             Sort.SelectedIndex = 0;
             BoxList.ItemsSource = ProductList.ShownProducts.ToList();
             Nums.Text = ProductList.Nums;
-
         }
+
         UserName.Text = Users.AllUsers[Users.Current].Name;
     }
+
     public void Add(object sender, RoutedEventArgs args)
     {
         new Edit().Show();
@@ -37,16 +39,19 @@ public partial class ProductPage : Window
         new MainWindow().Show();
         this.Close();
     }
+
     public async void Redact(object sender, RoutedEventArgs args)
     {
         await Task.Delay(100);
         this.Close();
     }
+
     public async void Redact()
     {
         await Task.Delay(100);
         this.Close();
     }
+
     public async void Delete(object sender, RoutedEventArgs args)
     {
         await Task.Delay(300);
@@ -60,30 +65,20 @@ public partial class ProductPage : Window
     {
         ProductList.Sort(Sort.SelectedIndex);
         BoxList.ItemsSource = ProductList.ShownProducts.ToList();
-
     }
+
     private void ComboBox_SelectionChanged(object? sender, Avalonia.Controls.SelectionChangedEventArgs e)
     {
         ProductList.ProductFiltration(Man.SelectedIndex);
         BoxList.ItemsSource = ProductList.ShownProducts.ToList();
         Nums.Text = ProductList.Nums;
-
     }
 
     private void TextBox_TextChanged(object? sender, Avalonia.Controls.TextChangedEventArgs e)
     {
-        if (Find.Text != string.Empty)
-        {
-            ProductList.Search(Find.Text);
-            BoxList.ItemsSource = ProductList.ShownProducts.ToList();
-            Nums.Text = ProductList.Nums;
-        }
-        else
-        {
-            ProductList.Fill(ProductList.Products);
-            BoxList.ItemsSource = ProductList.ShownProducts.ToList();
-            Nums.Text = ProductList.Nums;
-        }
+        ProductList.Search(Find.Text);
+        BoxList.ItemsSource = ProductList.ShownProducts.ToList();
+        Nums.Text = ProductList.Nums;
     }
 
     private void Buy(object? sender, RoutedEventArgs e)
@@ -104,7 +99,8 @@ public partial class ProductPage : Window
             }
             else
             {
-                BuyProd tmp = new BuyProd { BuyProduct = ProductList.Products[ProductList.ShownProducts[i].FindMyInd], User = Users.Current};
+                BuyProd tmp = new BuyProd
+                    { BuyProduct = ProductList.Products[ProductList.ShownProducts[i].FindMyInd], User = Users.Current };
                 if (Users.BuyList.Where(p => p.BuyProduct == tmp.BuyProduct).Count() == 0)
                 {
                     Users.BuyList.Add(tmp);
